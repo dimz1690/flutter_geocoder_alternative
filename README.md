@@ -2,16 +2,30 @@
 flutter package to convert latitude/longitude to address.
 
 ## Using
-The easiest way to use this library is pass your longitude and latitude in double format, like:
+The first import package:
+
 ```dart
-import 'package:http/http.dart' as http;
-
-var url = Uri.https('example.com', 'whatsit/create');
-var response = await http.post(url, body: {'name': 'doodle', 'color': 'blue'});
-print('Response status: ${response.statusCode}');
-print('Response body: ${response.body}');
-
-print(await http.read(Uri.https('example.com', 'foobar.txt')));
+import 'package:flutter_geocoder_alternative/flutter_geocoder_alternative.dart';
 ```
 
-You can alternatively use `Geocoder.google` member for requesting distant data from google services instead of native ones.
+Init geocoder class:
+```dart
+Geocoder geocoder = Geocoder();
+```
+
+Then create function for call the address:
+```dart
+Future<String> getAddress(double pLon, double pLat) {
+  return geocoder.getAddressFromLonLat(pLon, pLat);
+}
+```
+
+Call the function for get the address:
+```dart
+Future<void> _showAddress() async {
+  _address = await getAddress(-6.1805312, 106.8282181);
+}
+```
+
+
+
