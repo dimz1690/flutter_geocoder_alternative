@@ -5,4 +5,3 @@ flutter package to convert latitude/longitude to address.
 
 
 You can alternatively use `Geocoder.google` member for requesting distant data from google services instead of native ones.
-
