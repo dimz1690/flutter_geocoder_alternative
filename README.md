@@ -1,5 +1,5 @@
 # flutter_geocoder_alternative
-flutter package to convert latitude/longitude to address and from address to latitude/longitude.
+flutter package to convert latitude/longitude to address.
 
 # Usage
 
